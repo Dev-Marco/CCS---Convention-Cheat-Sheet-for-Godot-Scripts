@@ -1,0 +1,1063 @@
+[gd_scene load_steps=15 format=3 uid="uid://chg1324c1yonf"]
+
+[ext_resource type="Script" path="res://addons/godot_conventions_cheat_sheet/dock.gd" id="1_7664f"]
+
+[sub_resource type="SystemFont" id="SystemFont_7lalx"]
+font_names = PackedStringArray("Sans-Serif")
+font_weight = 750
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxnjg"]
+bg_color = Color(0.344076, 0.344076, 0.344076, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_y81wk"]
+font_names = PackedStringArray("Sans-Serif")
+font_weight = 600
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j7hir"]
+bg_color = Color(0.226707, 0.226708, 0.226707, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_ikcu4"]
+font_names = PackedStringArray("Sans-Serif")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7q4td"]
+bg_color = Color(0.226707, 0.226708, 0.226707, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_na874"]
+font_names = PackedStringArray("Sans-Serif")
+font_italic = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trwgu"]
+bg_color = Color(0.226707, 0.226708, 0.226707, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_3wr7d"]
+font_names = PackedStringArray("Monospace")
+font_weight = 600
+
+[sub_resource type="SystemFont" id="SystemFont_4ss6l"]
+font_names = PackedStringArray("Sans-Serif")
+font_weight = 750
+
+[sub_resource type="SystemFont" id="SystemFont_78em2"]
+font_names = PackedStringArray("Monospace")
+font_weight = 600
+
+[sub_resource type="SystemFont" id="SystemFont_hgm6b"]
+font_names = PackedStringArray("Monospace")
+font_weight = 600
+
+[sub_resource type="SystemFont" id="SystemFont_262gx"]
+font_names = PackedStringArray("Sans-Serif")
+
+[node name="Dock" type="ScrollContainer"]
+offset_right = 697.0
+offset_bottom = 648.0
+size_flags_horizontal = 2
+script = ExtResource("1_7664f")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="NamingConventions" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_7lalx")
+theme_override_font_sizes/font_size = 32
+text = "Naming Conventions"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="Type" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Type" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Type"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnjg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Type"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Type/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_y81wk")
+theme_override_font_sizes/font_size = 24
+text = "Type"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer/Type"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="File" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Type"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j7hir")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/File"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/File/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_ikcu4")
+text = "File"
+
+[node name="Class" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Type"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnjg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Class"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Class/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_ikcu4")
+text = "Class"
+
+[node name="Node" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Type"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j7hir")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Node"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Node/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_ikcu4")
+text = "Node"
+
+[node name="Function" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Type"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnjg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Function"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Function/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_ikcu4")
+text = "Function"
+
+[node name="Variable" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Type"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j7hir")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Variable"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Variable/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_ikcu4")
+text = "Variable"
+
+[node name="Signal" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Type"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnjg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Signal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Signal/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_ikcu4")
+text = "Signal"
+
+[node name="Constant" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Type"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j7hir")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Constant"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Constant/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_ikcu4")
+text = "Constant"
+
+[node name="Enum" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Type"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnjg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Enum"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/Enum/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_ikcu4")
+text = "Enum"
+
+[node name="EnumMember" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Type"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j7hir")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/EnumMember"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Type/EnumMember/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_ikcu4")
+text = "Enum Member"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="Convention" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Convention" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnjg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Convention"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Convention/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_y81wk")
+theme_override_font_sizes/font_size = 24
+text = "Convention"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="File" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7q4td")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/File"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/File/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_na874")
+text = "snake_case"
+
+[node name="Class" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnjg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Class"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Class/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_na874")
+text = "PascalCase"
+
+[node name="Node" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7q4td")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Node"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Node/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_na874")
+text = "PascalCase"
+
+[node name="Function" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnjg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Function"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Function/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_na874")
+text = "snake_case"
+
+[node name="Variable" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7q4td")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Variable"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Variable/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_na874")
+text = "snake_case"
+
+[node name="Signal" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnjg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Signal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Signal/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_na874")
+text = "snake_case"
+
+[node name="Constant" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7q4td")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Constant"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Constant/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_na874")
+text = "CONSTANT_CASE"
+
+[node name="Enum" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnjg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Enum"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/Enum/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_na874")
+text = "PascalCase"
+
+[node name="EnumMember" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7q4td")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/EnumMember"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Convention/EnumMember/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_na874")
+text = "CONSTANT_CASE"
+
+[node name="VSeparator2" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="Example" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Example" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Example"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnjg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Example"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Example/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_y81wk")
+theme_override_font_sizes/font_size = 24
+text = "Example"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer/Example"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="File" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Example"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_trwgu")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/File"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/File/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_3wr7d")
+text = "my_file.gd"
+
+[node name="Class" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Example"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnjg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Class"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Class/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_3wr7d")
+text = "MyClass"
+
+[node name="Node" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Example"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_trwgu")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Node"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Node/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_3wr7d")
+text = "MyNode"
+
+[node name="Function" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Example"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnjg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Function"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Function/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_3wr7d")
+text = "my_function(...)"
+
+[node name="Variable" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Example"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_trwgu")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Variable"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Variable/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_3wr7d")
+text = "my_variable"
+
+[node name="Signal" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Example"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnjg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Signal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Signal/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_3wr7d")
+text = "signal_emitted"
+
+[node name="Constant" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Example"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_trwgu")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Constant"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Constant/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_3wr7d")
+text = "MY_CONSTANT"
+
+[node name="Enum" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Example"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnjg")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Enum"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/Enum/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_3wr7d")
+text = "MyEnum"
+
+[node name="EnumMember" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer/Example"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_trwgu")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/EnumMember"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/Example/EnumMember/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_fonts/font = SubResource("SystemFont_3wr7d")
+text = "MY_ENUM_MEMBER"
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_4ss6l")
+theme_override_font_sizes/font_size = 32
+text = "Code Order"
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/v_separation = 12
+columns = 2
+
+[node name="Label1" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "01."
+
+[node name="Tool" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hgm6b")
+text = "tool"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "02."
+
+[node name="ClassName" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hgm6b")
+text = "class_name"
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "03."
+
+[node name="Extend" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hgm6b")
+text = "extend"
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "04."
+
+[node name="Docstring" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_262gx")
+text = "Docstring"
+
+[node name="Spacer1" type="Control" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Spacer2" type="Control" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "05."
+
+[node name="Signal" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hgm6b")
+text = "signal"
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "06."
+
+[node name="Enum" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hgm6b")
+text = "enum"
+
+[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "07."
+
+[node name="Constants" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hgm6b")
+text = "const"
+
+[node name="Label8" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "08."
+
+[node name="ExportedVariables" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hgm6b")
+text = "@export var"
+
+[node name="Label9" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "09."
+
+[node name="PublicVariables" type="HBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="PublicVariables1" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/PublicVariables"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_262gx")
+text = "Public"
+
+[node name="PublicVariables2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/PublicVariables"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hgm6b")
+text = "var"
+
+[node name="Label10" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "10."
+
+[node name="PrivateVariables" type="HBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="PrivateVariable1" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/PrivateVariables"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_262gx")
+text = "Private"
+
+[node name="PrivateVariables2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/PrivateVariables"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hgm6b")
+text = "var"
+
+[node name="Label11" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "11."
+
+[node name="OnreadyVariables" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hgm6b")
+text = "@onready var"
+
+[node name="Spacer3" type="Control" parent="MarginContainer/VBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Spacer4" type="Control" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Label12" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "12."
+
+[node name="BuiltinInitFunc" type="HBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="BuiltinInitFunc1" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/BuiltinInitFunc"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_262gx")
+text = "Optional built-in virtual"
+
+[node name="BuiltinInitFunc2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/BuiltinInitFunc"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hgm6b")
+text = "_init func"
+
+[node name="Label13" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "13."
+
+[node name="BuiltinReadyFunc" type="HBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="BuiltinReadyFunc1" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/BuiltinReadyFunc"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_262gx")
+text = "Built-in virtual"
+
+[node name="BuiltinReadyFunc2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/BuiltinReadyFunc"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hgm6b")
+text = "_ready func"
+
+[node name="Label14" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "14."
+
+[node name="RemainingBuiltin" type="HBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="RemainingBuiltin1" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/RemainingBuiltin"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_262gx")
+text = "Remaining built-in virtual"
+
+[node name="RemainingBuiltin2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/RemainingBuiltin"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hgm6b")
+text = "func"
+
+[node name="Label15" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "15."
+
+[node name="PublicFunc" type="HBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="PublicFunc1" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/PublicFunc"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_262gx")
+text = "Public"
+
+[node name="PublicFunc2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/PublicFunc"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hgm6b")
+text = "func"
+
+[node name="Label16" type="Label" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_78em2")
+text = "16."
+
+[node name="PrivateFunc" type="HBoxContainer" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="PrivateFunc1" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/PrivateFunc"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_262gx")
+text = "Private"
+
+[node name="PrivateFunc2" type="Label" parent="MarginContainer/VBoxContainer/GridContainer/PrivateFunc"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_hgm6b")
+text = "func"
