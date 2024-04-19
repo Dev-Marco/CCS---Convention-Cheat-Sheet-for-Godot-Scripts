@@ -14,7 +14,7 @@ This Godot Engine plugin provides a useful cheat sheet containing the most impor
 
 ## Usage
 Once the plugin is activated, a custom dock, named 'Conventions Cheat Sheet' should appear on the right side of your Layout.
-![Alt Text](/screenshots/ccs_icon.png?raw=true "The Conventions Cheat Sheet Dock")
+![Alt Text](screenshots/ccs.png "The Conventions Cheat Sheet Dock")
 
 ## Compatibility
 As of now, this plugin has been tested and confirmed to work on Godot 4.2.1, as this is the version I am currently using.
